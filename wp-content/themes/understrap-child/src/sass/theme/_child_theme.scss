@@ -1,0 +1,86 @@
+// Custom styles for child theme
+
+// Navbar wrapper - absolute positioning with transparent background
+#wrapper-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: transparent;
+}
+
+// Custom logo styling - no extra padding, height from WordPress customizer
+.custom-logo-link {
+    display: inline-block;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+
+    img.custom-logo {
+        // Height will be set by WordPress customizer
+        width: auto;
+        display: block;
+    }
+}
+
+// Main nav container max-width
+#main-nav {
+    .container,
+    .container-fluid {
+        max-width: 1420px;
+    }
+}
+
+// Navigation links styling
+.navbar-nav {
+    display: flex;
+    align-items: center;
+
+    .nav-link {
+        color: #ffffff !important;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        text-underline-offset: 5px;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            color: #ffffff !important;
+        }
+
+        // Active link styling
+        &.active {
+            text-decoration: underline;
+        }
+    }
+
+    // Active menu item
+    .menu-item.current-menu-item .nav-link,
+    .menu-item.current_page_item .nav-link {
+        text-decoration: underline;
+    }
+
+    // Dropdown links
+    .dropdown-menu {
+        .nav-link,
+        .dropdown-item {
+            color: #ffffff !important;
+            font-size: 24px;
+            text-underline-offset: 5px;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+                color: #ffffff !important;
+            }
+
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+}
